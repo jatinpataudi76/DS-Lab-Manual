@@ -1,0 +1,26 @@
+1) Recursive factorial and recursive Fibonacci are implemented.
+
+2) Naive Fibonacci is inefficient because same subproblems are solved again and again.
+
+3) Time and Space:
+
+Factorial:
+Time = O(n)
+Space = O(n)
+
+Naive Fibonacci:
+Time = O(2^n)
+Space = O(n)
+
+Memoized Fibonacci:
+Time = O(n)
+Space = O(n)
+
+4) Tower of Hanoi:
+For n = 3, moves are printed using recursion.
+Time complexity = O(2^n)
+
+5) Recursive Binary Search:
+Uses divide and conquer.
+Recurrence: T(n) = T(n/2) + O(1)
+Time complexity = O(log n)
