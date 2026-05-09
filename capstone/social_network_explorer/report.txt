@@ -1,0 +1,48 @@
+SOCIAL NETWORK EXPLORER - Design Report
+========================================
+
+1. DATA STRUCTURES USED
+------------------------
+- Profiles: Python Dictionary (Hash Map)
+  -> add/get/update: O(1) average time
+
+- Network: Adjacency List (Dict of Sets)
+  -> add/remove friendship: O(1)
+  -> get friends: O(degree)
+
+2. ALGORITHMS
+--------------
+- BFS (Shortest Path):
+  -> Uses queue + visited set
+  -> Time: O(V + E)
+  -> Finds minimum degrees of separation
+
+- DFS (Exploration):
+  -> Uses recursion + visited set
+  -> Time: O(V + E)
+  -> Explores friends-of-friends up to depth d
+
+3. RECOMMENDATION SYSTEM
+--------------------------
+- Compares interests using set intersection
+- Sorts non-friends by common interest count
+- Time: O(n log n) for sorting
+
+4. DESIGN DECISIONS
+---------------------
+- Dictionary chosen for O(1) user lookup
+- Set used for friends list (no duplicates, fast lookup)
+- BFS chosen over DFS for shortest path (BFS guarantees minimum hops)
+- Modular structure: each file has one responsibility
+
+5. COMPLEXITY SUMMARY
+----------------------
+Operation          | Structure        | Time
+-------------------|------------------|----------
+add_user           | Dictionary       | O(1)
+get_profile        | Dictionary       | O(1)
+add_friendship     | Adjacency List   | O(1)
+remove_friendship  | Adjacency List   | O(1)
+BFS shortest path  | Queue + Set      | O(V+E)
+DFS exploration    | Recursion + Set  | O(V+E)
+Recommendations    | Sort             | O(n log n)`
